@@ -19,9 +19,8 @@ class CardTest extends TestCase
      * @test
      * @dataProvider cardProvider
      */
-    public function カードの文字列表記が取得できること($suit, $rank)
+    public function カードの文字列表記が取得できること($suit, $rank, $expected)
     {
-        $expected = $rank . $suit;
         $card = new Card($suit, $rank);
         $this->assertEquals($expected, $card->getNotation());
     }
@@ -29,8 +28,8 @@ class CardTest extends TestCase
     public function cardProvider()
     {
         return [
-            [Suit::SPADE(), Rank::THREE()],
-            [Suit::HEART(), Rank::JACK()],
+            [Suit::SPADE(), Rank::THREE(), '3♠'],
+            [Suit::HEART(), Rank::JACK(), 'J♥'],
         ];
     }
 }

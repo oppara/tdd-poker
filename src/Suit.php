@@ -11,7 +11,7 @@ final class Suit
         'SPADE' => '♠',
         'HEART' => '♥',
         'CLUB' => '♣',
-        'DIAMOND' => '♦︎♦︎♦︎♦︎',
+        'DIAMOND' => '♦︎',
     ];
 }
 
